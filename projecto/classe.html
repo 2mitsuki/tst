@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f1f1f148;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            margin-top: 0;
+        }
+
+        .professores-list,
+        .alunos-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .professores-list li,
+        .alunos-list li {
+            margin-bottom: 10px;
+        }
+
+        .exercicios-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exercicios-list li {
+            margin-bottom: 10px;
+        }
+
+        #addExercicio {
+            display: none;
+        }
+
+        #exercicioInput {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        #addExercicioButton {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #addExercicioButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Classe</h2>
+
+        <!-- Professores da classe -->
+        <div class="section">
+            <h3>Professores</h3>
+            <ul class="professores-list">
+                <!-- Aqui serão exibidos os professores -->
+                <li>Professor 1</li>
+                <li>Professor 2</li>
+            </ul>
+        </div>
+
+        <!-- Alunos da classe -->
+        <div class="section">
+            <h3>Alunos</h3>
+            <ul class="alunos-list">
+                <!-- Aqui serão exibidos os alunos -->
+                <li>Aluno 1</li>
+                <li>Aluno 2</li>
+            </ul>
+        </div>
+
+        <!-- Exercícios -->
+        <div class="section">
+            <h3>Exercícios</h3>
+            <ul class="exercicios-list">
+                <!-- Aqui serão exibidos os exercícios -->
+                <li>Exercício 1 - <a href="#">Resolver</a></li>
+                <li>Exercício 2 - <a href="#">Resolver</a></li>
+            </ul>
+            <div id="addExercicio">
+                <input type="text" id="exercicioInput" placeholder="Digite o exercício...">
+                <button id="addExercicioButton">Adicionar Exercício</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var addExercicio = document.getElementById("addExercicio");
+            var addExercicioButton = document.getElementById("addExercicioButton");
+
+            // Mostrar/ocultar formulário para adicionar exercício
+            addExercicioButton.addEventListener("click", function() {
+                addExercicio.style.display = "block";
+                addExercicioButton.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>
